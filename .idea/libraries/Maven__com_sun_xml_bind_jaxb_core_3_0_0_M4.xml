@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.sun.xml.bind:jaxb-core:3.0.0-M4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../maven/respository_new/com/sun/xml/bind/jaxb-core/3.0.0-M4/jaxb-core-3.0.0-M4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../maven/respository_new/com/sun/xml/bind/jaxb-core/3.0.0-M4/jaxb-core-3.0.0-M4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../maven/respository_new/com/sun/xml/bind/jaxb-core/3.0.0-M4/jaxb-core-3.0.0-M4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

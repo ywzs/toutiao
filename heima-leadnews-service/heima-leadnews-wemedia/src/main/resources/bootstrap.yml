@@ -1,0 +1,18 @@
+server:
+  port: 51803
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+  application:
+    name: leadnews-wemedia
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.200.130:8848
+      config:
+        server-addr: 192.168.200.130:8848
+        file-extension: yml
+tess4j:
+  data-path: D:\java3\hmtt\heima-leadnews\tess4j
+  language: chi_sim
