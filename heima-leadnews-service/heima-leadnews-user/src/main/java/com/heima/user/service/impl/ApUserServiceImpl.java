@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.heima.model.common.dtos.ResponseResult;
 import com.heima.model.common.enums.AppHttpCodeEnum;
 import com.heima.model.user.dtos.LoginDto;
+import com.heima.model.user.dtos.UserAuthDto;
 import com.heima.model.user.pojos.ApUser;
 import com.heima.user.mapper.ApUserMapper;
 import com.heima.user.service.ApUserService;
@@ -18,6 +19,7 @@ import org.springframework.util.DigestUtils;
 import javax.annotation.Resource;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -53,5 +55,15 @@ public class ApUserServiceImpl extends ServiceImpl<ApUserMapper, ApUser> impleme
         Map<String,Object> map = new HashMap<>();
         map.put("token",AppJwtUtil.getToken(0L));
         return ResponseResult.okResult(map);
+    }
+
+    @Override
+    public ResponseResult listAuth(UserAuthDto dto) {
+        List<ApUser> apUsers = list();
+        for (ApUser user : apUsers){
+            user.setSalt(null);
+            user.setPassword(null);
+        }
+        return ResponseResult.okResult(apUsers);
     }
 }

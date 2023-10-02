@@ -5,6 +5,7 @@ import com.heima.model.article.dtos.ArticleHomeDto;
 import com.heima.model.article.pojos.ApArticle;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.Date;
 import java.util.List;
 
 @Mapper
@@ -16,4 +17,7 @@ public interface ApArticleMapper extends BaseMapper<ApArticle> {
      * @return
      */
     public List<ApArticle> loadArticleList(ArticleHomeDto dto, Short type);
+
+
+    public List<ApArticle> findArticle5days(Date date);
 }
