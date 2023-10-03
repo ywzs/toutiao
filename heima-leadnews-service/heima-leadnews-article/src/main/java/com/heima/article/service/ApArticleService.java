@@ -5,6 +5,7 @@ import com.heima.model.article.dtos.ArticleDto;
 import com.heima.model.article.dtos.ArticleHomeDto;
 import com.heima.model.article.pojos.ApArticle;
 import com.heima.model.common.dtos.ResponseResult;
+import com.heima.model.mess.ArticleVisitStreamMess;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
@@ -23,4 +24,10 @@ public interface ApArticleService extends IService<ApArticle> {
      * @return id
      */
     public ResponseResult saveArticle(ArticleDto dto);
+
+    /**
+     * 跟新文章分值
+     * @param mess
+     */
+    public void updateScore(ArticleVisitStreamMess mess);
 }
